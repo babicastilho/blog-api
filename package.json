@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node server.js"
+    "run server": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Barbara Castilho",
   "license": "ISC",
   "description": "",
   "dependencies": {

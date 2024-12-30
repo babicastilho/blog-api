@@ -63,17 +63,44 @@ server.get("/posts", (req, res) => {
     const posts = JSON.parse(
       fs.readFileSync(path.join(__dirname, "data", "posts.json"))
     );
+
     const page = parseInt(req.query.page) || 1; // Default to page 1
     const limit = parseInt(req.query.limit) || 10; // Default to 10 posts per page
 
+    const sortBy = req.query.sortBy || "id"; // Default to sorting by ID
+    const order = req.query.order === "desc" ? -1 : 1; // Default to ascending order
+
+    const startDate = req.query.startDate ? new Date(req.query.startDate) : null;
+    const endDate = req.query.endDate ? new Date(req.query.endDate) : null;
+
+    // Filter by date range
+    let filteredPosts = posts;
+    if (startDate || endDate) {
+      filteredPosts = posts.filter((post) => {
+        const postDate = new Date(post.publishedDate);
+        return (
+          (!startDate || postDate >= startDate) &&
+          (!endDate || postDate <= endDate)
+        );
+      });
+    }
+
+    // Sort posts
+    filteredPosts.sort((a, b) => {
+      if (a[sortBy] < b[sortBy]) return -1 * order;
+      if (a[sortBy] > b[sortBy]) return 1 * order;
+      return 0;
+    });
+
+    // Paginate posts
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
+    const paginatedPosts = filteredPosts.slice(startIndex, endIndex);
 
-    const paginatedPosts = posts.slice(startIndex, endIndex);
     res.json({
       page,
       limit,
-      total: posts.length,
+      total: filteredPosts.length,
       data: paginatedPosts,
     });
   } catch (error) {
@@ -155,7 +182,7 @@ server.get("/posts/:id", (req, res) => {
 });
 
 // Start the server on the specified port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000; // Changed from 3000 to 4000
 server.listen(PORT, () => {
   console.log(`JSON Server with middleware is running on port ${PORT}`);
 });
