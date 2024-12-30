@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "media"
+    },
+    {
+        "id": 2,
+        "name": "design"
+    },
+    {
+        "id": 3,
+        "name": "video"
+    },
+    {
+        "id": 4,
+        "name": "photography"
+    },
+    {
+        "id": 5,
+        "name": "technology"
+    },
+    {
+        "id": 6,
+        "name": "editing"
+    },
+    {
+        "id": 7,
+        "name": "social media"
+    },
+    {
+        "id": 8,
+        "name": "content creation"
+    },
+    {
+        "id": 9,
+        "name": "marketing"
+    },
+    {
+        "id": 10,
+        "name": "branding"
+    },
+    {
+        "id": 11,
+        "name": "UX/UI"
+    },
+    {
+        "id": 12,
+        "name": "development"
+    },
+    {
+        "id": 13,
+        "name": "creative"
+    },
+    {
+        "id": 14,
+        "name": "strategy"
+    },
+    {
+        "id": 15,
+        "name": "advertising"
+    },
+    {
+        "id": 16,
+        "name": "storytelling"
+    },
+    {
+        "id": 17,
+        "name": "animation"
+    },
+    {
+        "id": 18,
+        "name": "web design"
+    },
+    {
+        "id": 19,
+        "name": "filmmaking"
+    },
+    {
+        "id": 20,
+        "name": "graphic design"
+    },
+    {
+        "id": 21,
+        "name": "SEO"
+    },
+    {
+        "id": 22,
+        "name": "innovation"
+    },
+    {
+        "id": 23,
+        "name": "color grading"
+    },
+    {
+        "id": 24,
+        "name": "post-production"
+    },
+    {
+        "id": 25,
+        "name": "motion graphics"
+    },
+    {
+        "id": 26,
+        "name": "tutorial"
+    },
+    {
+        "id": 27,
+        "name": "how-to"
+    },
+    {
+        "id": 28,
+        "name": "resources"
+    },
+    {
+        "id": 29,
+        "name": "tips"
+    },
+    {
+        "id": 30,
+        "name": "tricks"
+    }
+]
