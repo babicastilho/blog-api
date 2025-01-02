@@ -4,7 +4,7 @@
   "main": "server/index.js",
   "scripts": {
     "run server": "node server/index.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "Barbara Castilho",
